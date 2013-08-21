@@ -1,4 +1,7 @@
 TweetStore::Application.routes.draw do
+  resources :tweets
+
+
   resources :items
 
 
