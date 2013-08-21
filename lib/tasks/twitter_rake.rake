@@ -12,30 +12,13 @@ namespace :twitter_rake do
 
     puts "Preparing to stream"
 
-    Tweet.delete_all
-
     # Setting the Client before the stream
     client = TweetStream::Client
     puts client
 
     ## Running the rake to and Tweets ##
     client.new.sample do |status|
-      count += 1
-      new_tweet = Tweet.create(
-          created_at: status.created_at,
-          tweet_id: status.id,
-          text: status.text,
-          source: status.source,
-          truncated: status.truncated,
-          retweet_count: status.retweet_count,
-          favorite_count: status.favorite_count,
-          favorited: status.favorited,
-          retweeted: status.retweeted,
-          lang: status.lang)
-
-          new_tweet.save
-
-          puts "#{count} tweets"
+      Tweet.create(status.to_hash)
     end
 
     client.on_limit do |skip_count|
