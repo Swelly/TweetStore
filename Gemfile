@@ -9,7 +9,7 @@ ruby "1.9.3"
 gem 'pg'
 
 gem 'pry-rails'
-gem 'mongoid'
+# gem 'mongoid'
 gem 'tweetstream'
 gem 'dotenv-rails', :groups => [:development, :test]
 
