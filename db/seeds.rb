@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+100.times do
+  Item.create(name: "Bottle", description: "Bottles will be useful in your journey. They can hold fairies, Poe's, milk, and other useful things", price: 10)
+end
