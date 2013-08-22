@@ -7,6 +7,8 @@ ruby "1.9.3"
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+gem 'brakeman'
+# gem 'metric_fu'
 
 gem 'pry-rails'
 gem 'mongoid'
