@@ -27,11 +27,3 @@ test:
   pool: 5
   username:
   password:
-
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: TweetStore_production
-  pool: 5
-  username:
-  password:
