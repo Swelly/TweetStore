@@ -19,6 +19,7 @@ namespace :twitter_rake do
     ## Running the rake to and Tweets ##
     client.new.sample do |status|
       Tweet.create(status.to_hash)
+      # puts "#{status}"
     end
 
     client.on_limit do |skip_count|

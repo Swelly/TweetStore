@@ -17,13 +17,4 @@ development:
   encoding: unicode
   database: TweetStore_development
   pool: 5
-  username:
-  password:
-
-test:
-  adapter: postgresql
-  encoding: unicode
-  database: TweetStore_test
-  pool: 5
-  username:
-  password:
+  timeout: 5000
